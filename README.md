@@ -75,6 +75,29 @@ It is designed to provide transparent property data, AI-driven valuation insight
 
 ---
 
+
+## 📂 Project Structure
+
+```bash
+src/
+ ├── auth/              # Authentication & Authorization
+ ├── agents/            # Agent management
+ ├── buyers/            # Buyer management
+ ├── sellers/           # Seller management
+ ├── property/          # Property listings
+ ├── property-extras/   # Property features
+ ├── enquiry/           # Enquiry workflow
+ ├── watchlists/        # Saved properties
+ ├── faq/               # FAQ system
+ ├── s3/                # AWS S3 integration
+ ├── mail/              # Email service
+ ├── map/               # Map integration
+ ├── common/            # Filters, interceptors, utils
+ ├── config/            # App & DB configuration
+```
+
+---
+
 # 📦 Main Dependencies
 
 | Package | Purpose |
