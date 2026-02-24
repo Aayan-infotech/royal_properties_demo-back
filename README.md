@@ -22,49 +22,52 @@ This project represents a modular, enterprise-ready backend architecture designe
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Description
 
-Royal Properties Backend powers a next-generation real estate ecosystem focused on **Canada (Ontario & British Columbia)**.
+Royal Properties Backend is a scalable and secure API system powering a next-generation real estate platform focused on the Canadian market (Ontario & British Columbia).
 
-The platform is built to:
-
-- Increase real estate market transparency  
-- Provide AI-powered valuation insights  
-- Expose historical sold price data  
-- Support investors with ROI analytics  
-- Deliver secure, scalable APIs  
-
-This backend follows clean architecture principles and enterprise development standards.
+It is designed to provide transparent property data, AI-driven valuation insights, rental ROI analytics, and MLS-backed listing accuracy — all within a modular, production-ready backend architecture.
 
 ---
 
-## 🎯 Core Vision
+# ✨ Core Features
 
-> To democratize real estate data by making accurate market intelligence accessible to everyone — not just agents.
+- 🔐 Secure JWT Authentication (Access + Refresh Tokens)
+- 👥 Role-Based Access Control (Admin, Agent, Buyer, Seller)
+- 🏡 Property Listing & Management System
+- 📊 Sold Price History Transparency
+- 📈 Rental ROI Analytics
+- 🧠 AI-Based Property Valuation Support
+- ☁️ AWS S3 File Upload Integration
+- 📧 Email Notification System
+- 📌 Watchlist Management
+- 📬 Enquiry Workflow Management
+- ⚙️ Environment-Based Configuration
+- 🐳 Docker Support
+- 🔄 CI/CD Ready (Jenkins)
 
 ---
 
-## 🏗 Architecture Highlights
+# 🏗 Architecture Highlights
 
 - Modular NestJS Architecture  
 - Clean Separation of Concerns  
 - Dependency Injection Pattern  
 - DTO-based Validation Layer  
-- Role-Based Access Control (RBAC)  
 - Global Exception Handling  
 - Standardized API Response Interceptor  
-- Production-Ready Structure  
+- Production-Ready Code Structure  
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
 | Layer | Technology |
 |-------|------------|
 | Framework | NestJS 11 |
 | Language | TypeScript |
 | Database | MongoDB (Mongoose) |
-| Auth | JWT (Access + Refresh Tokens) |
+| Authentication | JWT + Passport |
 | Cloud Storage | AWS S3 |
 | DevOps | Docker + Jenkins |
 | Validation | class-validator |
@@ -72,59 +75,72 @@ This backend follows clean architecture principles and enterprise development st
 
 ---
 
-## 🔐 Security & Authentication
+# 📦 Main Dependencies
 
-- JWT Authentication (Access + Refresh)
-- `JwtAuthGuard` for route protection
-- `RolesGuard` for RBAC enforcement
-- DTO validation for request integrity
-- Global error handling
-- Secure environment configuration
-
----
-
-## 🧠 Key Platform Capabilities
-
-### 1️⃣ AI-Based Property Valuation
-Estimates fair market value using pricing trends and MLS-backed data.
-
-### 2️⃣ Sold Price History Transparency
-Public visibility into historical sale prices — increasing trust and data transparency.
-
-### 3️⃣ Rental ROI Analytics
-Investment-focused insights including projected rental income and return analysis.
-
-### 4️⃣ School Rankings & Neighborhood Insights
-Fraser Institute rankings and community-level intelligence included with listings.
-
-### 5️⃣ Tech-Enabled Brokerage Model
-Data-driven platform supported by licensed agents for transaction finalization.
+| Package | Purpose |
+|----------|----------|
+| @nestjs/common | Core NestJS utilities |
+| @nestjs/core | NestJS framework core |
+| @nestjs/platform-express | Express integration |
+| @nestjs/config | Environment configuration |
+| @nestjs/jwt | JWT authentication |
+| @nestjs/passport | Passport integration |
+| @nestjs/mongoose | MongoDB integration |
+| mongoose | MongoDB ORM |
+| @aws-sdk/client-s3 | AWS S3 client |
+| @aws-sdk/client-secrets-manager | AWS Secrets Manager |
+| bcrypt | Password hashing |
+| class-validator | DTO validation |
+| class-transformer | Transform request objects |
+| passport | Authentication middleware |
+| passport-jwt | JWT strategy |
+| multer | File uploads |
+| multer-s3 | Upload files to S3 |
+| nodemailer | Email sending |
+| reflect-metadata | Decorator metadata support |
+| rxjs | Reactive programming support |
 
 ---
 
-## 📂 Project Structure
+# 🛠 Development Dependencies
 
-```bash
-src/
- ├── auth/              # Authentication & Authorization
- ├── agents/            # Agent management
- ├── buyers/            # Buyer management
- ├── sellers/           # Seller management
- ├── property/          # Property listings
- ├── property-extras/   # Property features
- ├── enquiry/           # Enquiry workflow
- ├── watchlists/        # Saved properties
- ├── faq/               # FAQ system
- ├── s3/                # AWS S3 integration
- ├── mail/              # Email service
- ├── map/               # Map integration
- ├── common/            # Filters, interceptors, utils
- ├── config/            # App & DB configuration
-```
+| Package | Purpose |
+|----------|----------|
+| @nestjs/cli | NestJS CLI |
+| @nestjs/testing | Testing utilities |
+| typescript | TypeScript support |
+| ts-node | Run TypeScript directly |
+| ts-jest | Jest + TypeScript support |
+| jest | Testing framework |
+| supertest | HTTP testing |
+| eslint | Linting |
+| prettier | Code formatting |
+| @types/node | Node type definitions |
+| @types/jest | Jest type definitions |
+| @types/express | Express types |
+| source-map-support | Improved stack traces |
+| tsconfig-paths | Path mapping support |
 
 ---
 
-## ⚙️ Installation
+# 🧪 Available Scripts
+
+| Script | Purpose |
+|--------|----------|
+| npm run build | Build project |
+| npm run start | Start application |
+| npm run start:dev | Development mode |
+| npm run start:debug | Debug mode |
+| npm run start:prod | Production mode |
+| npm run lint | Fix lint issues |
+| npm run test | Run unit tests |
+| npm run test:watch | Watch tests |
+| npm run test:cov | Coverage report |
+| npm run test:e2e | End-to-end tests |
+
+---
+
+# ⚙️ Installation
 
 ```bash
 npm install
@@ -132,47 +148,24 @@ npm install
 
 ---
 
-## ▶️ Running the Application
+# ▶️ Running the Application
 
-### Development
 ```bash
+# Development
 npm run start
-```
 
-### Watch Mode
-```bash
+# Watch mode
 npm run start:dev
-```
 
-### Production
-```bash
+# Production
 npm run start:prod
 ```
 
 ---
 
-## 🧪 Testing
+# 🌍 Environment Variables
 
-### Unit Tests
-```bash
-npm run test
-```
-
-### End-to-End Tests
-```bash
-npm run test:e2e
-```
-
-### Coverage
-```bash
-npm run test:cov
-```
-
----
-
-## 🌍 Environment Variables
-
-Create a `.env` file in the root directory:
+Create a `.env` file:
 
 ```env
 PORT=3000
@@ -185,25 +178,20 @@ AWS_REGION=
 S3_BUCKET_NAME=
 ```
 
-⚠️ Never commit your `.env` file to version control.
+⚠️ Never commit `.env` to version control.
 
 ---
 
-## 🐳 Docker Support
+# 🐳 Docker Support
 
-### Build Image
 ```bash
 docker build -t royal-properties-backend .
-```
-
-### Run Container
-```bash
 docker run -p 3000:3000 royal-properties-backend
 ```
 
 ---
 
-## 📜 License
+# 📜 License
 
 This project is proprietary and developed for Royal Properties.
 
