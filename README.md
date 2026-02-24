@@ -13,15 +13,6 @@ Built with **NestJS 11 | TypeScript | MongoDB | AWS**
 
 ---
 
-## 👨‍💻 About the Developer
-
-Hi, my name is **Imtiyaz Hussain**.  
-I am a **Software Developer & Backend Engineer** passionate about building scalable, production-ready systems using modern technologies.
-
-This project represents a modular, enterprise-ready backend architecture designed for real-world real estate platforms.
-
----
-
 # 📌 Project Description
 
 Royal Properties Backend is a scalable and secure API system powering a next-generation real estate platform focused on the Canadian market (Ontario & British Columbia).
