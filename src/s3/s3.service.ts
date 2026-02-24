@@ -32,7 +32,7 @@ export class S3Service {
     this.bucket = secrets.AWS_S3_BUCKET;
 
     this.s3 = new S3Client({
-      region: secrets.AWS_REGION || 'us-east-1',
+      region: secrets.AWS_REGION,
       credentials: {
         accessKeyId: secrets.AWS_ACCESS_KEY,
         secretAccessKey: secrets.AWS_SECRET_KEY,
