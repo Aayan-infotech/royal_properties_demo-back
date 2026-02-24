@@ -13,6 +13,15 @@ Built with **NestJS 11 | TypeScript | MongoDB | AWS**
 
 ---
 
+## 👨‍💻 About the Developer
+
+Hi, my name is **Imtiyaz Hussain**.  
+I am a **Software Developer & Backend Engineer** passionate about building scalable, production-ready systems using modern technologies.
+
+This project represents a modular, enterprise-ready backend architecture designed for real-world real estate platforms.
+
+---
+
 # 📌 Project Description
 
 Royal Properties Backend is a scalable and secure API system powering a next-generation real estate platform focused on the Canadian market (Ontario & British Columbia).
@@ -177,22 +186,31 @@ npm run start:prod
 
 ---
 
-# 🌍 Environment Variables
+# 🔐 Configuration Management (AWS Secrets Manager)
 
-Create a `.env` file:
+This application does not rely on local `.env` files for sensitive configuration in production.
 
-```env
-PORT=3000
-MONGO_URI=
-JWT_SECRET=
-JWT_REFRESH_SECRET=
-AWS_ACCESS_KEY=
-AWS_SECRET_KEY=
-AWS_REGION=
-S3_BUCKET_NAME=
-```
+All sensitive credentials and secrets are securely managed using **AWS Secrets Manager**.
 
-⚠️ Never commit `.env` to version control.
+### 🔒 Managed Secrets
+
+The following configurations are retrieved securely from AWS Secrets Manager:
+
+- Database Connection URI (MongoDB)
+- JWT Access Token Secret
+- JWT Refresh Token Secret
+- AWS S3 Credentials
+- Application-level sensitive keys
+
+---
+
+## 🛠 How It Works
+
+- The application connects to AWS Secrets Manager during startup.
+- Secrets are fetched dynamically using the AWS SDK.
+- Values are injected into the configuration layer.
+- No hardcoded secrets exist in the codebase.
+- No sensitive credentials are stored in version control.
 
 ---
 
